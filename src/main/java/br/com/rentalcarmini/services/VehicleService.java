@@ -35,4 +35,8 @@ public class VehicleService {
     public void delete(VehicleModel vehicleModel) {
         this.vehicleReposity.delete(vehicleModel);
     }
+
+    public Optional<VehicleModel> getByLicensePlate(String licensePlate) {
+        return this.vehicleReposity.findByLicensePlate(licensePlate);
+    }
 }
